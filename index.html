@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProdukFYP.ai — Generator Video Affiliate 15-20 Detik</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #09090b;
+      color: #f4f4f5;
+      background-image:
+        radial-gradient(circle at 15% 15%, rgba(234, 179, 8, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 85% 80%, rgba(168, 85, 247, 0.1) 0%, transparent 45%);
+    }
+    .glass-card {
+      background: rgba(24, 24, 27, 0.78);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #fde047 0%, #f59e0b 50%, #ec4899 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 45%, #db2777 100%);
+      transition: all 0.25s ease;
+    }
+    .btn-primary:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.45);
+    }
+    .btn-primary:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+    }
+    .dropzone-active {
+      border-color: #f59e0b !important;
+      background: rgba(245, 158, 11, 0.08) !important;
+    }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #09090b; }
+    ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 3px; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-40 glass-card border-b border-zinc-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 via-orange-500 to-pink-600 flex items-center justify-center shadow-lg shadow-amber-500/20">
+          <i class="fa-solid fa-bolt text-zinc-950 text-lg"></i>
+        </div>
+        <div>
+          <span class="font-extrabold text-xl tracking-tight text-white">Produk<span class="gold-gradient-text">FYP.ai</span></span>
+          <span class="hidden sm:inline-block ml-2 text-[11px] font-semibold px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-300 border border-amber-500/30">Affiliate Video Studio</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3 text-xs text-zinc-400">
+        <span class="hidden md:flex items-center gap-1.5 bg-zinc-900/90 px-3 py-1.5 rounded-full border border-zinc-800">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          100% Client-Side Render • Tanpa Watermark
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-8 pb-4 text-center">
+    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900/90 border border-zinc-800 text-xs font-medium text-amber-300 mb-4">
+      <i class="fa-solid fa-fire text-orange-500"></i>
+      Cukup 1 Foto Produk → Jadi Video Vertikal 9:16 Siap FYP
+    </div>
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white max-w-3xl mx-auto leading-tight">
+      Ubah Foto Produk Jadi <span class="gold-gradient-text">Video Affiliate Viral</span> dalam Hitungan Detik
+    </h1>
+    <p class="mt-3 text-sm sm:text-base text-zinc-400 max-w-2xl mx-auto">
+      Otomatis dilengkapi hook 3 detik pertama, animasi zoom & floating dinamis, stiker promo, musik beat, dan caption siap salin untuk TikTok, Reels, & Shopee Video.
+    </p>
+  </section>
+
+  <!-- Main Workspace -->
+  <main class="max-w-7xl w-full mx-auto px-4 sm:px-6 py-6 flex-1 grid grid-cols-1 lg:grid-cols-12 gap-7 items-start">
+
+    <!-- Left Panel: Input & Configuration -->
+    <div class="lg:col-span-7 space-y-5">
+
+      <!-- Step 1: Upload Product Image -->
+      <div class="glass-card rounded-2xl p-5 sm:p-6">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="font-bold text-base sm:text-lg text-white flex items-center gap-2.5">
+            <span class="w-6 h-6 rounded-full bg-amber-500 text-zinc-950 text-xs font-extrabold flex items-center justify-center">1</span>
+            Upload Referensi / Foto Produk
+          </h2>
+          <span class="text-xs text-zinc-400">JPG, PNG, WEBP</span>
+        </div>
+
+        <div id="dropzone" class="relative border-2 border-dashed border-zinc-700 hover:border-amber-400/70 rounded-xl p-6 text-center cursor-pointer transition-all bg-zinc-900/50">
+          <input type="file" id="imageInput" accept="image/*" class="hidden" />
+          <div id="uploadPlaceholder" class="space-y-2.5">
+            <div class="w-12 h-12 mx-auto rounded-full bg-zinc-800 flex items-center justify-center text-amber-400 text-xl">
+              <i class="fa-solid fa-cloud-arrow-up"></i>
+            </div>
+            <p class="text-sm font-semibold text-zinc-200">Klik atau seret foto produk ke sini</p>
+            <p class="text-xs text-zinc-500">Gunakan foto produk yang jelas agar hasil animasi zoom terlihat tajam</p>
+          </div>
+
+          <div id="previewWrapper" class="hidden flex-col sm:flex-row items-center gap-4 text-left">
+            <img id="uploadedThumb" src="" alt="Preview Produk" class="w-24 h-24 object-cover rounded-xl border border-zinc-700 shadow-md bg-zinc-950" />
+            <div class="flex-1 min-w-0">
+              <p id="fileNameLabel" class="text-sm font-bold text-white truncate">produk-pilihan.png</p>
+              <p class="text-xs text-emerald-400 mt-0.5"><i class="fa-solid fa-circle-check mr-1"></i>Gambar siap dirender ke format 9:16</p>
+              <button type="button" id="changeImageBtn" class="mt-2.5 text-xs font-semibold px-3 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-200 transition">
+                <i class="fa-solid fa-rotate mr-1"></i>Ganti Foto
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sample Presets -->
+        <div class="mt-4">
+          <p class="text-xs text-zinc-400 mb-2">Belum ada foto? Coba klik sampel instan:</p>
+          <div class="grid grid-cols-3 gap-2.5">
+            <button type="button" onclick="loadSampleProduct('serum')" class="sample-btn flex items-center gap-2 p-2 rounded-xl bg-zinc-900/90 hover:bg-zinc-800 border border-zinc-800 text-left transition">
+              <span class="w-8 h-8 rounded-lg bg-pink-500/20 text-pink-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-droplet"></i></span>
+              <span class="text-xs font-semibold text-zinc-200 truncate">Glow Serum</span>
+            </button>
+            <button type="button" onclick="loadSampleProduct('tws')" class="sample-btn flex items-center gap-2 p-2 rounded-xl bg-zinc-900/90 hover:bg-zinc-800 border border-zinc-800 text-left transition">
+              <span class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-headphones"></i></span>
+              <span class="text-xs font-semibold text-zinc-200 truncate">SoundPods X</span>
+            </button>
+            <button type="button" onclick="loadSampleProduct('tumbler')" class="sample-btn flex items-center gap-2 p-2 rounded-xl bg-zinc-900/90 hover:bg-zinc-800 border border-zinc-800 text-left transition">
+              <span class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0"><i class="fa-solid fa-bottle-water"></i></span>
+              <span class="text-xs font-semibold text-zinc-200 truncate">Tumbler 1L</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2: Product Info & Viral Hook -->
+      <div class="glass-card rounded-2xl p-5 sm:p-6 space-y-4">
+        <h2 class="font-bold text-base sm:text-lg text-white flex items-center gap-2.5">
+          <span class="w-6 h-6 rounded-full bg-amber-500 text-zinc-950 text-xs font-extrabold flex items-center justify-center">2</span>
+          Detail Produk & Gaya Hook FYP
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-zinc-300 mb-1.5">Nama Produk</label>
+            <input type="text" id="productName" value="GlowCera Brightening Serum" placeholder="Contoh: Sepatu Sneakers Pria" class="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700/90 text-sm text-white focus:outline-none focus:border-amber-400" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-zinc-300 mb-1.5">Badge Promo / Harga</label>
+            <input type="text" id="promoBadge" value="DISKON 50% HARI INI" placeholder="Contoh: MULAI 49RB AJA" class="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700/90 text-sm text-white focus:outline-none focus:border-amber-400" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-zinc-300 mb-1.5">Keunggulan Utama (Muncul di Tengah Video)</label>
+          <input type="text" id="productBenefit" value="Mencerahkan dalam 7 hari & bikin glowing seharian!" placeholder="Contoh: Anti air, baterai awet 24 jam" class="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700/90 text-sm text-white focus:outline-none focus:border-amber-400" />
+        </div>
+
+        <!-- Hook Style Selector -->
+        <div>
+          <label class="block text-xs font-semibold text-zinc-300 mb-2">Pilih Gaya Storytelling / Hook Viral</label>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5" id="styleSelector">
+            <button type="button" data-style="racun" class="style-card active-style p-3 rounded-xl border border-amber-400 bg-amber-500/15 text-left transition">
+              <div class="text-amber-400 text-sm mb-1"><i class="fa-solid fa-fire-flame-curved"></i></div>
+              <div class="text-xs font-bold text-white">Racun TikTok</div>
+              <div class="text-[10px] text-zinc-400 mt-0.5">Enerjik & FOMO</div>
+            </button>
+            <button type="button" data-style="estetik" class="style-card p-3 rounded-xl border border-zinc-800 bg-zinc-900/80 hover:border-zinc-700 text-left transition">
+              <div class="text-pink-400 text-sm mb-1"><i class="fa-solid fa-sparkles"></i></div>
+              <div class="text-xs font-bold text-white">Soft & Estetik</div>
+              <div class="text-[10px] text-zinc-400 mt-0.5">Elegan & Clean</div>
+            </button>
+            <button type="button" data-style="review" class="style-card p-3 rounded-xl border border-zinc-800 bg-zinc-900/80 hover:border-zinc-700 text-left transition">
+              <div class="text-emerald-400 text-sm mb-1"><i class="fa-solid fa-star"></i></div>
+              <div class="text-xs font-bold text-white">Review Jujur</div>
+              <div class="text-[10px] text-zinc-400 mt-0.5">To the point</div>
+            </button>
+            <button type="button" data-style="problem" class="style-card p-3 rounded-xl border border-zinc-800 bg-zinc-900/80 hover:border-zinc-700 text-left transition">
+              <div class="text-purple-400 text-sm mb-1"><i class="fa-solid fa-lightbulb"></i></div>
+              <div class="text-xs font-bold text-white">Problem-Solusi</div>
+              <div class="text-[10px] text-zinc-400 mt-0.5">Bikin penasaran</div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Duration & Audio Controls -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
+          <div>
+            <label class="block text-xs font-semibold text-zinc-300 mb-1.5">Durasi Video (Optimal FYP)</label>
+            <div class="grid grid-cols-2 gap-2">
+              <button type="button" data-dur="15" class="dur-btn py-2 px-3 rounded-xl border border-amber-400 bg-amber-500/15 text-xs font-bold text-amber-300">
+                <i class="fa-regular fa-clock mr-1"></i> 15 Detik
+              </button>
+              <button type="button" data-dur="20" class="dur-btn py-2 px-3 rounded-xl border border-zinc-800 bg-zinc-900 text-xs font-bold text-zinc-400 hover:text-white">
+                <i class="fa-regular fa-clock mr-1"></i> 20 Detik
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-zinc-300 mb-1.5">Musik Latar Beat Otomatis</label>
+            <button type="button" id="toggleAudioBtn" class="w-full py-2 px-3 rounded-xl border border-emerald-500/40 bg-emerald-500/10 text-xs font-bold text-emerald-300 flex items-center justify-between">
+              <span><i class="fa-solid fa-music mr-1.5"></i>Upbeat Affiliate Beat</span>
+              <span id="audioStatusBadge" class="px-2 py-0.5 rounded bg-emerald-500/20 text-[10px]">AKTIF</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Generate Action -->
+        <button type="button" id="generateBtn" class="w-full btn-primary py-3.5 px-6 rounded-xl font-extrabold text-sm sm:text-base text-white shadow-xl flex items-center justify-center gap-2.5 mt-2">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <span id="generateBtnText">Buat Video Affiliate Sekarang (15 Detik)</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Right Panel: 9:16 Live Preview & Export -->
+    <div class="lg:col-span-5 space-y-5">
+      <div class="glass-card rounded-2xl p-5 sm:p-6 flex flex-col items-center">
+        <div class="w-full flex items-center justify-between mb-4">
+          <span class="text-xs font-bold uppercase tracking-wider text-zinc-400 flex items-center gap-2">
+            <i class="fa-solid fa-mobile-screen-button text-amber-400"></i> Preview Vertikal 9:16
+          </span>
+          <span id="renderTimerBadge" class="text-xs font-mono px-2.5 py-1 rounded-md bg-zinc-900 border border-zinc-800 text-zinc-300">
+            00:00 / 00:15
+          </span>
+        </div>
+
+        <!-- Phone Mockup Frame -->
+        <div class="relative w-[270px] sm:w-[290px] aspect-[9/16] rounded-[28px] p-2 bg-zinc-950 border-2 border-zinc-800 shadow-2xl overflow-hidden">
+          <canvas id="videoCanvas" width="540" height="960" class="w-full h-full rounded-[20px] object-cover bg-zinc-900"></canvas>
+          <video id="resultVideo" controls playsinline class="hidden w-full h-full rounded-[20px] object-cover bg-black"></video>
+
+          <!-- Rendering Progress Overlay -->
+          <div id="renderOverlay" class="hidden absolute inset-2 rounded-[20px] bg-zinc-950/75 backdrop-blur-xs flex flex-col items-center justify-center p-5 text-center">
+            <div class="w-12 h-12 rounded-full border-4 border-amber-500/30 border-t-amber-400 animate-spin mb-3"></div>
+            <p class="text-sm font-bold text-white">Merender Video FYP...</p>
+            <p id="renderStepText" class="text-xs text-amber-300 mt-1">Menyusun Hook 3 Detik Pertama</p>
+            <div class="w-full bg-zinc-800 h-2 rounded-full mt-4 overflow-hidden">
+              <div id="renderProgressBar" class="bg-gradient-to-r from-amber-400 to-pink-500 h-full w-0 transition-all duration-150"></div>
+            </div>
+            <span id="renderPercentText" class="text-[11px] font-mono text-zinc-400 mt-1.5">0%</span>
+          </div>
+        </div>
+
+        <!-- Export & Direct Social Share -->
+        <div id="exportSection" class="w-full mt-5 space-y-3">
+          <button type="button" id="downloadBtn" disabled class="w-full py-3 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 disabled:bg-zinc-800 disabled:text-zinc-500 text-zinc-950 font-extrabold text-sm flex items-center justify-center gap-2 transition cursor-pointer disabled:cursor-not-allowed">
+            <i class="fa-solid fa-download"></i>
+            Download Video Siap Upload
+          </button>
+
+          <div class="grid grid-cols-3 gap-2">
+            <button type="button" onclick="shareToSocial('TikTok')" class="py-2.5 px-2 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-xs font-semibold text-zinc-200 flex items-center justify-center gap-1.5 transition">
+              <i class="fa-brands fa-tiktok text-pink-400"></i> TikTok
+            </button>
+            <button type="button" onclick="shareToSocial('Instagram Reels')" class="py-2.5 px-2 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-xs font-semibold text-zinc-200 flex items-center justify-center gap-1.5 transition">
+              <i class="fa-brands fa-instagram text-amber-400"></i> Reels
+            </button>
+            <button type="button" onclick="shareToSocial('Shopee Video')" class="py-2.5 px-2 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-xs font-semibold text-zinc-200 flex items-center justify-center gap-1.5 transition">
+              <i class="fa-solid fa-bag-shopping text-orange-500"></i> Shopee
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Auto FYP Caption & Hashtags -->
+      <div class="glass-card rounded-2xl p-5">
+        <div class="flex items-center justify-between mb-2.5">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-amber-300 flex items-center gap-1.5">
+            <i class="fa-solid fa-hashtag"></i> Caption & Hashtag FYP Otomatis
+          </h3>
+          <button type="button" id="copyCaptionBtn" class="text-xs font-semibold px-2.5 py-1 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-200 transition">
+            <i class="fa-regular fa-copy mr-1"></i>Salin
+          </button>
+        </div>
+        <textarea id="captionOutput" rows="3" readonly class="w-full p-3 rounded-xl bg-zinc-950/90 border border-zinc-800 text-xs text-zinc-300 leading-relaxed focus:outline-none"></textarea>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // State Management
+    const state = {
+      imageObj: null,
+      style: 'racun',
+      duration: 15,
+      includeAudio: true,
+      isRendering: false,
+      recordedBlob: null,
+      recordedExt: 'webm'
+    };
+
+    const HOOK_TEMPLATES = {
+      racun: {
+        hook: 'STOP SCROLL! Nyesel baru tau produk ini 😱',
+        mid: 'Kualitas sebagus ini lagi promo gila-gilaan!',
+        cta: 'CEK KERANJANG KUNING SEKARANG 👇',
+        bgColors: ['#18181b', '#3b0764', '#701a75'],
+        accent: '#facc15'
+      },
+      estetik: {
+        hook: 'Upgrade daily routine kamu jadi lebih estetik ✨',
+        mid: 'Simpel, elegan, dan kepake banget tiap hari.',
+        cta: 'KLIK LINK DI BIO / KERANJANG 🤍',
+        bgColors: ['#1c1917', '#44403c', '#78350f'],
+        accent: '#fde68a'
+      },
+      review: {
+        hook: 'Review jujur setelah pemakaian rutin! ⭐',
+        mid: 'Worth it banget dengan harga segini, no debat!',
+        cta: 'MUMPUNG STOK MASIH ADA, CHECKOUT 👇',
+        bgColors: ['#09090b', '#064e3b', '#065f46'],
+        accent: '#34d399'
+      },
+      problem: {
+        hook: 'Masih sering ngalamin masalah ini? Ini solusinya! 💡',
+        mid: 'Praktis, cepat beres, dan hasilnya langsung kelihatan.',
+        cta: 'AMBIL PROMONYA DI KERANJANG 👇',
+        bgColors: ['#0f172a', '#1e1b4b', '#312e81'],
+        accent: '#38bdf8'
+      }
+    };
+
+    // DOM Elements
+    const dropzone = document.getElementById('dropzone');
+    const imageInput = document.getElementById('imageInput');
+    const uploadPlaceholder = document.getElementById('uploadPlaceholder');
+    const previewWrapper = document.getElementById('previewWrapper');
+    const uploadedThumb = document.getElementById('uploadedThumb');
+    const fileNameLabel = document.getElementById('fileNameLabel');
+    const canvas = document.getElementById('videoCanvas');
+    const ctx = canvas.getContext('2d');
+    const resultVideo = document.getElementById('resultVideo');
+    const generateBtn = document.getElementById('generateBtn');
+    const generateBtnText = document.getElementById('generateBtnText');
+    const downloadBtn = document.getElementById('downloadBtn');
+    const renderOverlay = document.getElementById('renderOverlay');
+    const renderProgressBar = document.getElementById('renderProgressBar');
+    const renderPercentText = document.getElementById('renderPercentText');
+    const renderStepText = document.getElementById('renderStepText');
+    const renderTimerBadge = document.getElementById('renderTimerBadge');
+    const captionOutput = document.getElementById('captionOutput');
+
+    // Generate clean SVG product illustrations for instant demo
+    function createSampleSVGDataURL(type) {
+      let svg = '';
+      if (type === 'serum') {
+        svg = `<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+          <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f472b6"/><stop offset="100%" stop-color="#db2777"/></linearGradient></defs>
+          <rect width="600" height="600" rx="60" fill="#fdf2f8"/>
+          <rect x="255" y="110" width="90" height="70" rx="14" fill="#18181b"/>
+          <rect x="275" y="70" width="50" height="50" rx="20" fill="#f59e0b"/>
+          <rect x="210" y="180" width="180" height="310" rx="36" fill="url(#g1)"/>
+          <rect x="230" y="240" width="140" height="160" rx="16" fill="#ffffff" opacity="0.92"/>
+          <text x="300" y="305" font-family="sans-serif" font-size="26" font-weight="bold" fill="#be185d" text-anchor="middle">GLOWCERA</text>
+          <text x="300" y="340" font-family="sans-serif" font-size="18" fill="#52525b" text-anchor="middle">10% Niacinamide</text>
+        </svg>`;
+      } else if (type === 'tws') {
+        svg = `<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+          <defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#22d3ee"/><stop offset="100%" stop-color="#2563eb"/></linearGradient></defs>
+          <rect width="600" height="600" rx="60" fill="#0f172a"/>
+          <rect x="165" y="180" width="270" height="250" rx="75" fill="url(#g2)"/>
+          <line x1="165" y1="275" x2="435" y2="275" stroke="#0f172a" stroke-width="8"/>
+          <circle cx="300" cy="340" r="14" fill="#34d399"/>
+          <text x="300" y="495" font-family="sans-serif" font-size="28" font-weight="bold" fill="#e2e8f0" text-anchor="middle">SOUNDPODS PRO X</text>
+        </svg>`;
+      } else {
+        svg = `<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+          <defs><linearGradient id="g3" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fbbf24"/><stop offset="100%" stop-color="#ea580c"/></linearGradient></defs>
+          <rect width="600" height="600" rx="60" fill="#18181b"/>
+          <rect x="245" y="85" width="110" height="45" rx="12" fill="#52525b"/>
+          <rect x="215" y="130" width="170" height="380" rx="34" fill="url(#g3)"/>
+          <text x="300" y="330" font-family="sans-serif" font-size="28" font-weight="bold" fill="#18181b" text-anchor="middle">HYDRO 1000ML</text>
+        </svg>`;
+      }
+      return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+    }
+
+    function loadSampleProduct(type) {
+      const presets = {
+        serum: {
+          name: 'GlowCera Brightening Serum',
+          badge: 'DISKON 50% HARI INI',
+          benefit: 'Mencerahkan dalam 7 hari & bikin glowing seharian!',
+          file: 'glowcera-serum.png'
+        },
+        tws: {
+          name: 'SoundPods Pro X ANC',
+          badge: 'FLASH SALE 99RB',
+          benefit: 'Bass nendang, baterai tahan 30 jam & anti air!',
+          file: 'soundpods-pro-x.png'
+        },
+        tumbler: {
+          name: 'Tumbler Vacuum Termos 1L',
+          badge: 'BELI 1 GRATIS 1',
+          benefit: 'Tahan dingin & panas hingga 24 jam penuh!',
+          file: 'tumbler-1L.png'
+        }
+      };
+
+      const item = presets[type];
+      document.getElementById('productName').value = item.name;
+      document.getElementById('promoBadge').value = item.badge;
+      document.getElementById('productBenefit').value = item.benefit;
+      loadImageSource(createSampleSVGDataURL(type), item.file);
+    }
+
+    function loadImageSource(src, filename) {
+      const img = new Image();
+      img.onload = () => {
+        state.imageObj = img;
+        uploadedThumb.src = src;
+        fileNameLabel.textContent = filename;
+        uploadPlaceholder.classList.add('hidden');
+        previewWrapper.classList.remove('hidden');
+        previewWrapper.classList.add('flex');
+        resetToCanvasPreview();
+        drawFrame(0.18);
+        updateCaption();
+      };
+      img.src = src;
+    }
+
+    // Dropzone & File Input Events
+    dropzone.addEventListener('click', () => imageInput.click());
+    document.getElementById('changeImageBtn').addEventListener('click', (e) => {
+      e.stopPropagation();
+      imageInput.click();
+    });
+
+    dropzone.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      dropzone.classList.add('dropzone-active');
+    });
+    dropzone.addEventListener('dragleave', () => dropzone.classList.remove('dropzone-active'));
+    dropzone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dropzone.classList.remove('dropzone-active');
+      if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+        handleFile(e.dataTransfer.files[0]);
+      }
+    });
+
+    imageInput.addEventListener('change', (e) => {
+      if (e.target.files && e.target.files[0]) {
+        handleFile(e.target.files[0]);
+      }
+    });
+
+    function handleFile(file) {
+      if (!file.type.startsWith('image/')) {
+        Swal.fire({ icon: 'error', title: 'Format Tidak Didukung', text: 'Harap upload file gambar (JPG, PNG, atau WEBP).', background: '#18181b', color: '#fff' });
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = (ev) => loadImageSource(ev.target.result, file.name);
+      reader.readAsDataURL(file);
+    }
+
+    // Style Selector
+    document.querySelectorAll('.style-card').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.style-card').forEach(b => {
+          b.classList.remove('border-amber-400', 'bg-amber-500/15');
+          b.classList.add('border-zinc-800', 'bg-zinc-900/80');
+        });
+        btn.classList.remove('border-zinc-800', 'bg-zinc-900/80');
+        btn.classList.add('border-amber-400', 'bg-amber-500/15');
+        state.style = btn.dataset.style;
+        resetToCanvasPreview();
+        drawFrame(0.18);
+        updateCaption();
+      });
+    });
+
+    // Duration Selector
+    document.querySelectorAll('.dur-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.dur-btn').forEach(b => {
+          b.classList.remove('border-amber-400', 'bg-amber-500/15', 'text-amber-300');
+          b.classList.add('border-zinc-800', 'bg-zinc-900', 'text-zinc-400');
+        });
+        btn.classList.remove('border-zinc-800', 'bg-zinc-900', 'text-zinc-400');
+        btn.classList.add('border-amber-400', 'bg-amber-500/15', 'text-amber-300');
+        state.duration = parseInt(btn.dataset.dur, 10);
+        generateBtnText.textContent = `Buat Video Affiliate Sekarang (${state.duration} Detik)`;
+        renderTimerBadge.textContent = `00:00 / 00:${state.duration}`;
+      });
+    });
+
+    // Audio Toggle
+    document.getElementById('toggleAudioBtn').addEventListener('click', () => {
+      state.includeAudio = !state.includeAudio;
+      const badge = document.getElementById('audioStatusBadge');
+      const btn = document.getElementById('toggleAudioBtn');
+      if (state.includeAudio) {
+        badge.textContent = 'AKTIF';
+        btn.className = 'w-full py-2 px-3 rounded-xl border border-emerald-500/40 bg-emerald-500/10 text-xs font-bold text-emerald-300 flex items-center justify-between';
+      } else {
+        badge.textContent = 'BISU';
+        btn.className = 'w-full py-2 px-3 rounded-xl border border-zinc-700 bg-zinc-900 text-xs font-bold text-zinc-400 flex items-center justify-between';
+      }
+    });
+
+    // Live input listeners
+    ['productName', 'promoBadge', 'productBenefit'].forEach(id => {
+      document.getElementById(id).addEventListener('input', () => {
+        resetToCanvasPreview();
+        drawFrame(0.18);
+        updateCaption();
+      });
+    });
+
+    function resetToCanvasPreview() {
+      resultVideo.pause();
+      resultVideo.classList.add('hidden');
+      canvas.classList.remove('hidden');
+    }
+
+    function updateCaption() {
+      const name = document.getElementById('productName').value.trim() || 'Produk Viral';
+      const benefit = document.getElementById('productBenefit').value.trim() || 'Kualitas terbaik dengan harga promo!';
+      const tpl = HOOK_TEMPLATES[state.style];
+      const tagClean = name.replace(/[^a-zA-Z0-9]/g, '');
+      captionOutput.value = `${tpl.hook}\n${name} — ${benefit}\nMumpung masih promo, langsung cek keranjang kuning sekarang!\n\n#RacunTikTok #RekomendasiProduk #${tagClean} #AffiliateIndonesia #FYP #SpillProduk`;
+    }
+
+    // Helper: Wrap Text on Canvas
+    function drawWrappedText(text, x, y, maxWidth, lineHeight) {
+      const words = text.split(' ');
+      let line = '';
+      const lines = [];
+      for (let n = 0; n < words.length; n++) {
+        const testLine = line + words[n] + ' ';
+        const metrics = ctx.measureText(testLine);
+        if (metrics.width > maxWidth && n > 0) {
+          lines.push(line.trim());
+          line = words[n] + ' ';
+        } else {
+          line = testLine;
+        }
+      }
+      lines.push(line.trim());
+      lines.forEach((l, idx) => {
+        ctx.fillText(l, x, y + idx * lineHeight);
+      });
+      return lines.length;
+    }
+
+    // Core Canvas Frame Renderer (progress 0.0 -> 1.0)
+    function drawFrame(progress) {
+      const W = canvas.width;
+      const H = canvas.height;
+      const tpl = HOOK_TEMPLATES[state.style];
+      const productName = document.getElementById('productName').value.trim() || 'Produk Pilihan';
+      const promoBadge = document.getElementById('promoBadge').value.trim() || 'PROMO SPESIAL';
+      const benefit = document.getElementById('productBenefit').value.trim() || 'Kualitas premium harga hemat!';
+
+      // 1. Dynamic Animated Background Gradient
+      const grad = ctx.createLinearGradient(0, 0, W, H);
+      grad.addColorStop(0, tpl.bgColors[0]);
+      grad.addColorStop(0.5 + Math.sin(progress * Math.PI * 2) * 0.15, tpl.bgColors[1]);
+      grad.addColorStop(1, tpl.bgColors[2]);
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, W, H);
+
+      // Subtle Moving Light Orbs
+      ctx.save();
+      ctx.globalAlpha = 0.18;
+      ctx.fillStyle = tpl.accent;
+      ctx.beginPath();
+      ctx.arc(W * 0.2 + Math.cos(progress * Math.PI * 2) * 60, H * 0.25 + Math.sin(progress * Math.PI * 2) * 40, 140, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+
+      // 2. Product Showcase Card with Ken Burns Zoom + Float
+      if (state.imageObj) {
+        const zoom = 1.0 + Math.sin(progress * Math.PI) * 0.14;
+        const floatY = Math.sin(progress * Math.PI * 4) * 10;
+        const cardW = 390;
+        const cardH = 390;
+        const cardX = (W - cardW) / 2;
+        const cardY = 250 + floatY;
+
+        ctx.save();
+        // Glow shadow behind product
+        ctx.shadowColor = 'rgba(0, 0, 0, 0.55)';
+        ctx.shadowBlur = 32;
+        ctx.shadowOffsetY = 16;
+
+        // Rounded clip box
+        ctx.beginPath();
+        ctx.roundRect(cardX, cardY, cardW, cardH, 34);
+        ctx.fillStyle = '#ffffff';
+        ctx.fill();
+        ctx.clip();
+
+        // Draw image cover with zoom
+        const imgRatio = state.imageObj.width / state.imageObj.height;
+        let drawW = cardW * zoom;
+        let drawH = cardH * zoom;
+        if (imgRatio > 1) {
+          drawW = drawH * imgRatio;
+        } else {
+          drawH = drawW / imgRatio;
+        }
+        const offsetX = cardX + (cardW - drawW) / 2;
+        const offsetY = cardY + (cardH - drawH) / 2;
+        ctx.drawImage(state.imageObj, offsetX, offsetY, drawW, drawH);
+        ctx.restore();
+
+        // Border highlight
+        ctx.strokeStyle = 'rgba(255,255,255,0.28)';
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.roundRect(cardX, cardY, cardW, cardH, 34);
+        ctx.stroke();
+      }
+
+      // 3. Top Hook Banner (0% - 35% timeline strong hook, persists cleanly)
+      const hookScale = progress < 0.08 ? 0.85 + (progress / 0.08) * 0.15 : 1;
+      ctx.save();
+      ctx.translate(W / 2, 125);
+      ctx.scale(hookScale, hookScale);
+
+      ctx.fillStyle = 'rgba(9, 9, 11, 0.84)';
+      ctx.beginPath();
+      ctx.roundRect(-235, -58, 470, 116, 22);
+      ctx.fill();
+      ctx.strokeStyle = tpl.accent;
+      ctx.lineWidth = 2.5;
+      ctx.stroke();
+
+      ctx.fillStyle = '#ffffff';
+      ctx.font = '800 25px "Plus Jakarta Sans", sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      drawWrappedText(tpl.hook, 0, -16, 430, 32);
+      ctx.restore();
+
+      // 4. Floating Promo Sticker Badge
+      const badgeAngle = Math.sin(progress * Math.PI * 6) * 0.07;
+      ctx.save();
+      ctx.translate(W - 125, 245);
+      ctx.rotate(badgeAngle);
+      ctx.fillStyle = '#ef4444';
+      ctx.beginPath();
+      ctx.roundRect(-95, -24, 190, 48, 24);
+      ctx.fill();
+      ctx.strokeStyle = '#fde047';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      ctx.fillStyle = '#ffffff';
+      ctx.font = '800 15px "Plus Jakarta Sans", sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(promoBadge.toUpperCase().slice(0, 22), 0, 1);
+      ctx.restore();
+
+      // 5. Dynamic Storytelling Caption Box (Changes at 35% & 70%)
+      let dynamicText = productName;
+      let subLabel = 'REKOMENDASI VIRAL';
+      if (progress >= 0.32 && progress < 0.72) {
+        dynamicText = benefit;
+        subLabel = 'KENAPA WAJIB PUNYA?';
+      } else if (progress >= 0.72) {
+        dynamicText = tpl.mid;
+        subLabel = 'STOK TERBATAS!';
+      }
+
+      ctx.save();
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.65)';
+      ctx.beginPath();
+      ctx.roundRect(45, 675, W - 90, 130, 22);
+      ctx.fill();
+
+      ctx.fillStyle = tpl.accent;
+      ctx.font = '800 14px "Plus Jakarta Sans", sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText(subLabel, W / 2, 706);
+
+      ctx.fillStyle = '#ffffff';
+      ctx.font = '700 22px "Plus Jakarta Sans", sans-serif';
+      drawWrappedText(dynamicText, W / 2, 742, W - 130, 28);
+      ctx.restore();
+
+      // 6. Pulsing Bottom CTA Button (Keranjang Kuning)
+      const pulse = 1 + Math.sin(progress * Math.PI * 10) * 0.035;
+      ctx.save();
+      ctx.translate(W / 2, 868);
+      ctx.scale(pulse, pulse);
+
+      const btnGrad = ctx.createLinearGradient(-210, 0, 210, 0);
+      btnGrad.addColorStop(0, '#facc15');
+      btnGrad.addColorStop(1, '#f97316');
+      ctx.fillStyle = btnGrad;
+      ctx.beginPath();
+      ctx.roundRect(-215, -32, 430, 64, 32);
+      ctx.fill();
+
+      ctx.fillStyle = '#09090b';
+      ctx.font = '800 19px "Plus Jakarta Sans", sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(tpl.cta, 0, 1);
+      ctx.restore();
+
+      // 7. Top Progress Bar Indicator (TikTok Style)
+      ctx.fillStyle = 'rgba(255,255,255,0.2)';
+      ctx.fillRect(0, 0, W, 8);
+      ctx.fillStyle = tpl.accent;
+      ctx.fillRect(0, 0, W * progress, 8);
+    }
+
+    // Synthesize Upbeat Affiliate Background Beat via Web Audio API
+    function createSynthAudioStream(durationSec) {
+      const AudioCtx = window.AudioContext || window.webkitAudioContext;
+      const audioCtx = new AudioCtx();
+      const dest = audioCtx.createMediaStreamDestination();
+      const masterGain = audioCtx.createGain();
+      masterGain.gain.value = 0.22;
+      masterGain.connect(dest);
+
+      const bpm = 124;
+      const beatInterval = 60 / bpm;
+      const totalBeats = Math.floor(durationSec / beatInterval);
+      const now = audioCtx.currentTime;
+      const notes = [261.63, 329.63, 392.00, 523.25, 392.00, 329.63];
+
+      for (let i = 0; i < totalBeats; i++) {
+        const time = now + i * beatInterval;
+
+        // Kick drum on every beat
+        const kickOsc = audioCtx.createOscillator();
+        const kickGain = audioCtx.createGain();
+        kickOsc.type = 'sine';
+        kickOsc.frequency.setValueAtTime(140, time);
+        kickOsc.frequency.exponentialRampToValueAtTime(42, time + 0.12);
+        kickGain.gain.setValueAtTime(0.7, time);
+        kickGain.gain.exponentialRampToValueAtTime(0.001, time + 0.14);
+        kickOsc.connect(kickGain);
+        kickGain.connect(masterGain);
+        kickOsc.start(time);
+        kickOsc.stop(time + 0.15);
+
+        // Melodic pluck
+        const pluckOsc = audioCtx.createOscillator();
+        const pluckGain = audioCtx.createGain();
+        pluckOsc.type = 'triangle';
+        pluckOsc.frequency.setValueAtTime(notes[i % notes.length], time);
+        pluckGain.gain.setValueAtTime(0.25, time);
+        pluckGain.gain.exponentialRampToValueAtTime(0.001, time + 0.22);
+        pluckOsc.connect(pluckGain);
+        pluckGain.connect(masterGain);
+        pluckOsc.start(time);
+        pluckOsc.stop(time + 0.24);
+      }
+
+      return { stream: dest.stream, audioCtx };
+    }
+
+    // Video Recording & Export Engine
+    generateBtn.addEventListener('click', async () => {
+      if (state.isRendering) return;
+      if (!state.imageObj) {
+        Swal.fire({ icon: 'warning', title: 'Pilih Foto Produk Dulu', text: 'Silakan upload foto produk atau klik salah satu sampel instan.', background: '#18181b', color: '#fff' });
+        return;
+      }
+
+      state.isRendering = true;
+      generateBtn.disabled = true;
+      downloadBtn.disabled = true;
+      resetToCanvasPreview();
+      renderOverlay.classList.remove('hidden');
+
+      const durationMs = state.duration * 1000;
+      const canvasStream = canvas.captureStream(30);
+      let audioResources = null;
+
+      if (state.includeAudio) {
+        try {
+          audioResources = createSynthAudioStream(state.duration);
+          audioResources.stream.getAudioTracks().forEach(track => canvasStream.addTrack(track));
+        } catch (err) {
+          console.warn('Audio stream fallback to silent:', err);
+        }
+      }
+
+      // Select best supported MIME type
+      let mimeType = 'video/webm;codecs=vp9';
+      state.recordedExt = 'webm';
+      if (MediaRecorder.isTypeSupported('video/mp4')) {
+        mimeType = 'video/mp4';
+        state.recordedExt = 'mp4';
+      } else if (!MediaRecorder.isTypeSupported(mimeType)) {
+        mimeType = 'video/webm';
+      }
+
+      const chunks = [];
+      const recorder = new MediaRecorder(canvasStream, { mimeType, videoBitsPerSecond: 3500000 });
+      recorder.ondataavailable = (e) => {
+        if (e.data && e.data.size > 0) chunks.push(e.data);
+      };
+
+      recorder.onstop = () => {
+        if (audioResources && audioResources.audioCtx) {
+          audioResources.audioCtx.close();
+        }
+        state.recordedBlob = new Blob(chunks, { type: mimeType });
+        const videoURL = URL.createObjectURL(state.recordedBlob);
+
+        resultVideo.src = videoURL;
+        canvas.classList.add('hidden');
+        resultVideo.classList.remove('hidden');
+        resultVideo.play().catch(() => {});
+
+        renderOverlay.classList.add('hidden');
+        state.isRendering = false;
+        generateBtn.disabled = false;
+        downloadBtn.disabled = false;
+
+        Swal.fire({
+          icon: 'success',
+          title: 'Video Affiliate Siap FYP!',
+          text: `Video ${state.duration} detik berhasil dibuat dan siap di-download atau langsung di-upload.`,
+          timer: 2600,
+          showConfirmButton: false,
+          background: '#18181b',
+          color: '#fff'
+        });
+      };
+
+      recorder.start();
+      const startTime = performance.now();
+
+      function renderLoop(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / durationMs, 1);
+        drawFrame(progress);
+
+        const pct = Math.round(progress * 100);
+        const secNow = Math.min(Math.floor(elapsed / 1000), state.duration);
+        renderProgressBar.style.width = `${pct}%`;
+        renderPercentText.textContent = `${pct}%`;
+        renderTimerBadge.textContent = `00:${String(secNow).padStart(2, '0')} / 00:${state.duration}`;
+
+        if (progress < 0.33) {
+          renderStepText.textContent = 'Merender Hook 3 Detik Pertama...';
+        } else if (progress < 0.72) {
+          renderStepText.textContent = 'Menambahkan Highlight Keunggulan Produk...';
+        } else {
+          renderStepText.textContent = 'Finalisasi CTA Keranjang Kuning...';
+        }
+
+        if (progress < 1) {
+          requestAnimationFrame(renderLoop);
+        } else {
+          setTimeout(() => recorder.stop(), 150);
+        }
+      }
+
+      requestAnimationFrame(renderLoop);
+    });
+
+    // Download Handler
+    downloadBtn.addEventListener('click', () => {
+      if (!state.recordedBlob) return;
+      const nameSlug = (document.getElementById('productName').value.trim() || 'produk-fyp')
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-');
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(state.recordedBlob);
+      a.download = `${nameSlug}-${state.duration}s-fyp.${state.recordedExt}`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    });
+
+    // Social Media Quick Share
+    async function shareToSocial(platform) {
+      if (!state.recordedBlob) {
+        Swal.fire({
+          icon: 'info',
+          title: 'Buat Video Terlebih Dahulu',
+          text: `Klik tombol "Buat Video Affiliate Sekarang" sebelum membagikan ke ${platform}.`,
+          background: '#18181b',
+          color: '#fff'
+        });
+        return;
+      }
+
+      // Copy caption automatically for convenience
+      navigator.clipboard?.writeText(captionOutput.value).catch(() => {});
+
+      const file = new File([state.recordedBlob], `video-affiliate-fyp.${state.recordedExt}`, { type: state.recordedBlob.type });
+      if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        try {
+          await navigator.share({
+            files: [file],
+            title: 'Video Affiliate Produk',
+            text: captionOutput.value
+          });
+          return;
+        } catch (err) {
+          // User cancelled native share sheet
+        }
+      }
+
+      // Desktop fallback
+      downloadBtn.click();
+      Swal.fire({
+        icon: 'success',
+        title: `Siap Upload ke ${platform}!`,
+        html: `Video otomatis ter-download dan <b>Caption + Hashtag FYP</b> sudah tersalin ke clipboard. Tinggal paste saat upload di ${platform}!`,
+        background: '#18181b',
+        color: '#fff'
+      });
+    }
+
+    // Copy Caption Button
+    document.getElementById('copyCaptionBtn').addEventListener('click', () => {
+      navigator.clipboard.writeText(captionOutput.value);
+      Swal.fire({
+        toast: true,
+        position: 'top-end',
+        icon: 'success',
+        title: 'Caption & Hashtag disalin!',
+        showConfirmButton: false,
+        timer: 1800,
+        background: '#18181b',
+        color: '#fff'
+      });
+    });
+
+    // Initialize default sample on load so canvas isn't blank
+    window.addEventListener('DOMContentLoaded', () => {
+      loadSampleProduct('serum');
+    });
+  </script>
+</body>
+</html>
